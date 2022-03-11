@@ -480,8 +480,8 @@ end
 #TODO check new edition det(h)
 
 #= example
-include("/home/ajantha/Documents/RNS/UniCertGF.jl")
-include("/home/ajantha/Documents/Determinant/PseudoHcolSeven.jl")
+include("/home/ajantha/Documents/RNS/UniCert.jl")
+include("/home/ajantha/Documents/Determinant/PseudoDeterminant.jl")
  Zx,x=FlintZZ["x"]
  k,a=number_field(x^3+7x+1)
  m=rand(MatrixSpace(k,10,10),100:1000);
@@ -495,38 +495,3 @@ u : Upperbound for the size of entries of matrix m
 
 
 
-
-#Error from Det Algo combined
-#= timing
-k,a=number_field(x^3+7x+1)
- A=rand(MatrixSpace(k,200,200),-100:100);
-@time denominatorDet(A, -100:100, 100, 1000000, UniCert);
- 47.893645 seconds (51.63 M allocations: 4.736 GiB, 2.41% gc time)
-Hecke 86.756779 seconds (27.56 M allocations: 3.786 GiB, 0.24% gc time)
- A=rand(MatrixSpace(k,250,250),-100:100);
-82.240201 seconds (92.74 M allocations: 8.360 GiB, 3.01% gc time)
-Hecke 227.066364 seconds (70.01 M allocations: 12.547 GiB, 0.13% gc time)
-A=rand(MatrixSpace(k,300,300),-100:100);
-162.491994 seconds (149.16 M allocations: 14.201 GiB, 2.37% gc time)
-Hecke 500.179925 seconds (145.87 M allocations: 31.046 GiB, 0.10% gc time)
-A=rand(MatrixSpace(k,50,50),-100:100);
-3.232310 seconds (2.74 M allocations: 191.457 MiB, 4.34% gc time)
-Hecke 0.368396 seconds (185.85 k allocations: 8.980 MiB)
-with unicert 11.717651 seconds (31.10 M allocations: 2.206 GiB, 12.50% gc time)
-8 seconds unicert
-k, a = wildanger_field(10, 13)
-A=rand(MatrixSpace(k,50,50),-100:100);
-solved
-  5.507159 seconds (1.10 M allocations: 252.816 MiB, 0.49% gc time)
-pseudo_hcol
-addition & simplification
- 59.356221 seconds (6.91 M allocations: 6.170 GiB, 0.49% gc time)
-Reduction
-  5.639285 seconds (2.32 M allocations: 455.558 MiB, 0.50% gc time)
-Det Z
- 20.665928 seconds (1.42 M allocations: 1.584 GiB, 0.38% gc time)
-TOTAL
- 96.774058 seconds (17.89 M allocations: 9.127 GiB, 0.54% gc time)
-24 times CRT
-Hecke  7.523214 seconds (4.28 M allocations: 1.092 GiB, 0.52% gc time)
-=#
