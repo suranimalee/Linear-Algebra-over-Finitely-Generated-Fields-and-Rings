@@ -236,4 +236,7 @@ println("Number of CRT: $t")
 end
 
 
+			
+## Compute Determinant of a matrix A, solving Ax=b for a given arbitrary RHS matrix b 
+## @time DetFinal(A,b,rational_reconstruction_copy,HadamardCoeff,determinant_di		
 
