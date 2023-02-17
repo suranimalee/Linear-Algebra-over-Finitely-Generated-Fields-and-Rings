@@ -11,9 +11,7 @@ ModularDeterminant Algorithm (function named as "DetFinal" in the file) computes
 
 ```ruby
 using Hecke
-
 Zx,x=FlintZZ["x"]
-
 k,a=number_field(x^3+7x+1)
 
 A = rand(MatrixSpace(k , 50,50), -10000:10000);
