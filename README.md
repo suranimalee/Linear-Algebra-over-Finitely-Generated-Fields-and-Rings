@@ -17,3 +17,7 @@ A = rand(MatrixSpace(k , 50,50), -10000:10000);
 b = rand(MatrixSpace(k , 50,1), -10000:10000);
 @time DetFinal(A,b,rational_reconstruction_copy,HadamardCoeff,determinant_dixon);
 ```
+Time comparison has been made with the exixting implementation in Hecke 
+```ruby
+@time det(A)
+```
