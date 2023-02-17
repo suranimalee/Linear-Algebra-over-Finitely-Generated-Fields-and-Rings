@@ -226,7 +226,7 @@ t=0
 
     if d1==de
 println("Number of CRT: $t")
-       return de ,den
+       return de #,den
     else
     d1=de
     p = next_prime(p)
