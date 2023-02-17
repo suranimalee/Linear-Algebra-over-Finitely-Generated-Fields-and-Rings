@@ -6,7 +6,7 @@ The implementations were done using the Hecke software package: https://github.c
 
 The file ModularDeterminant.jl provides a determinant computation algorithm using modular techniques. It contains the implementations done for the paper "Fast and Practical Algorithm for Computing the Determinant of a Matrix over Number Fields" for ISSAC 2023 conference. 
 
-ModularDeterminant Algorithm (function named as "DetFinal" in the file) computes the determinant of a matrix A, by solving Ax=b for a given arbitrary RHS matrix b  
+ModularDeterminant Algorithm (function named as "DetFinal" in the file) computes the determinant of a matrix $A$, by solving Ax=b for a given arbitrary RHS matrix b  
 
 
 using Hecke
