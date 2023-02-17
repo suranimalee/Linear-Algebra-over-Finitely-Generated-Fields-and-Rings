@@ -1,13 +1,13 @@
 # Linear-Algebra-over-Finitely-Generated-Fields-and-Rings
 Linear Algebra over Finitely Generated Fields and Rings 
 
-This repository provides all the implementations of the algorithms available in the PhD thesis "Linear Algebra over Finitely Generated Fields and Rings". Please see https://kluedo.ub.rptu.de/frontdoor/index/index/docId/6560 
+This repository provides all the implementations of the algorithms available in the Ph.D. thesis "Linear Algebra over Finitely Generated Fields and Rings". Please see https://kluedo.ub.rptu.de/frontdoor/index/index/docId/6560 
 
 The implementations were done using the Hecke software package: https://github.com/thofma/Hecke.jl
 
-The file ModularDeterminant.jl provides a determinant computation algorithm using modular techniques. It contains the implementations done for the paper "Fast and Practical Algorithm for Computing the Determinant of a Matrix over Number Fields" for ISSAC 2023 conference. 
+The file ModularDeterminant.jl provides a determinant computation algorithm using modular techniques. It contains the implementations done for the paper "Fast and Practical Algorithm for Computing the Determinant of a Matrix over Number Fields" for the ISSAC 2023 conference. 
 
-ModularDeterminant Algorithm (function named as "DetFinal" in the file) computes the determinant of a matrix $A$, by solving $Ax=b$ for a given arbitrary RHS matrix $b$  
+ModularDeterminant Algorithm (function named "DetFinal" in the file) computes the determinant of a matrix $A$, by solving $Ax=b$ for a given arbitrary RHS matrix $b$  
 
 ```ruby
 using Hecke
