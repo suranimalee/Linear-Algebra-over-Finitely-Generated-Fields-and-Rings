@@ -6,17 +6,12 @@ The implementations were done using the Hecke software package: https://github.c
 
 The file ModularDeterminant.jl provides a determinant computation algorithm using modular techniques. It contains the implementations done for the paper "Fast and Practical Algorithm for Computing the Determinant of a Matrix over Number Fields" for ISSAC 2023 conference. 
 
-ModularDeterminant Algorithm (function named as "DetFinal" in the file) computes the determinant of a matrix $A$, by solving Ax=b for a given arbitrary RHS matrix b  
+ModularDeterminant Algorithm (function named as "DetFinal" in the file) computes the determinant of a matrix $A$, by solving $Ax=b$ for a given arbitrary RHS matrix $b$  
 
 
-using Hecke
-
-Zx,x=FlintZZ["x"]
-
-k,a=number_field(x^3+7x+1)
-
-A = rand(MatrixSpace(k , 50,50), -10000:10000);
-
-b = rand(MatrixSpace(k , 50,1), -10000:10000);
-
-@time DetFinal(A,b,rational_reconstruction_copy,HadamardCoeff,determinant_dixon);
+\texttt{using Hecke}\\
+\texttt{Zx,x=FlintZZ["x"]}\\
+\texttt{k,a=number_field(x^3+7x+1)}\\
+\texttt{A = rand(MatrixSpace(k , 50,50), -10000:10000);}\\
+  \texttt{b = rand(MatrixSpace(k , 50,1), -10000:10000);}\\
+  \texttt{@time DetFinal(A,b,rational_reconstruction_copy,HadamardCoeff,determinant_dixon);}
