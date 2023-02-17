@@ -14,6 +14,6 @@ using Hecke
 Zx,x=FlintZZ["x"]
 k,a=number_field(x^3+7x+1)
 A = rand(MatrixSpace(k , 50,50), -10000:10000);
-b = rand(MatrixSpace(k , 50,1), -10000:10000);}
+b = rand(MatrixSpace(k , 50,1), -10000:10000);
 @time DetFinal(A,b,rational_reconstruction_copy,HadamardCoeff,determinant_dixon);
 ```
